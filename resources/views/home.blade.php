@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="{{ URL::asset('/css/favicon.jpg') }}" type="image/x-icon"/>
 <script> var assetBaseUrl = "{{ asset('') }}";</script>
 <script src="{{ URL::asset('js/script.js') }}" defer></script>
 <script src="{{ URL::asset('js/db.js') }}" defer></script>
