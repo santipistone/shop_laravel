@@ -88,6 +88,9 @@ class Admin extends BaseController
             $q1 = Ordini::all()->where('codice_cliente', '=' , $cod)->sortBy('data_')->reverse()->take(10);
             return view("home")->with("page", "list-order")->with("q1", $q1);
         }
+        else {
+            return redirect ("home/user");
+        }  
     } 
 
 

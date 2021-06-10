@@ -19,6 +19,9 @@ class Item extends BaseController
         elseif (request('list-item-name') != null) {
             $q1 = Prodotto::where('nome', 'LIKE', '%'.request('list-item-name').'%')->get()->take($num2);
             return view("home")->with("page", "item-list")->with("q1", $q1);
+        }
+        else {
+            return redirect ("home/user");
         }   
     }
 
