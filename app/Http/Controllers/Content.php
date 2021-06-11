@@ -8,6 +8,9 @@ class Content extends BaseController
 
     public static function getItem($id) {
         $product = Prodotto::where('codice', $id)->first();
+        if ($product === null) {
+            return view("error_item");
+        }
         return view('item')->with('name', $product->nome)->with('img', $product->image)->with('it', $product->codice)->with('stock', $product->stock)->with('desc', $product->descrizione)->with('price', $product->prezzo)->with('mag', $product->codice_m);
     }
 
